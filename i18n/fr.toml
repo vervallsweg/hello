@@ -1,8 +1,0 @@
-[hello]
-other = "Bonjour"
-
-[i-am]
-other = "Je suis"
-
-[generator]
-other = "Made with <a href='https://gohugo.io'>Hugo</a>. <a href='https://github.com/vervallsweg/hello/'>Website</a> and <a href='https://github.com/vervallsweg/hallo-hugo-vervallsweg/'>theme</a> are open source."
