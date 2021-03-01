@@ -1,0 +1,30 @@
+name: CI
+on: [push]
+
+jobs:
+
+  build-page:
+    name: build-page
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Set Node.js 10.x  🔐
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+
+      - name: yarn install 💾
+        run: yarn install
+
+      - name: yarn build 🔧
+        run: yarn build
+
+      - name: upload artifacts ➡️☁️
+        uses: actions/upload-artifact@v1
+        with:
+          name: page
+          path: public

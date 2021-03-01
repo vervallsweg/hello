@@ -1,0 +1,8 @@
+[hello]
+other = "Hallo"
+
+[i-am]
+other = "Ik ben"
+
+[generator]
+other = "Made with <a href='https://gohugo.io'>Hugo</a>. <a href='https://github.com/vervallsweg/hello/'>Website</a> and <a href='https://github.com/vervallsweg/hallo-hugo-vervallsweg/'>theme</a> are open source."

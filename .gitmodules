@@ -1,0 +1,3 @@
+[submodule "themes/hallo-hugo-vervallsweg"]
+	path = themes/hallo-hugo-vervallsweg
+	url = git@github.com:vervallsweg/hallo-hugo-vervallsweg.git

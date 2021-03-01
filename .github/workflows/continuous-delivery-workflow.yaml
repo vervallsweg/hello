@@ -1,0 +1,33 @@
+name: CD
+on:
+  push:
+    branches:
+      - production
+jobs:
+
+ production-page:
+    name: production-page
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Set Node.js 10.x 🔐
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+
+      - name: yarn install 💾
+        run: yarn install
+
+      - name: yarn build 🔧
+        run: yarn build
+
+      - name: Deploy - page 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: master #the branch the action should deploy to.
+          FOLDER: public #the folder the action should deploy.
